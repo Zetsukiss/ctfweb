@@ -1,7 +1,10 @@
 <script>
-let w = open("http://ritual-app:5000/");
-
-setTimeout(()=>{
-  w.postMessage("console.log(document.cookie)","*")
+setInterval(()=>{
+  try{
+    console.log("T1 alive")
+    if(window.opener){
+        window.opener.console.log("MESSAGE FROM T1")
+    }
+  }catch(e){}
 },100);
 </script>
